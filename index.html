@@ -3,12 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enhanced Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        ul {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-   <p>"Hello World"</p> 
-    <p>"New document"</p> 
-     <p>"Hello World"</p> 
-     <p>"Новый текст"</p> 
+    <header>
+        <h1>Welcome to My Page</h1>
+    </header>
+
+    <main>
+        <p class="highlight">"Hello World"</p> 
+        <p>"New document"</p> 
+        <p class="highlight">"Hello World"</p> 
+        <p>"Новый текст"</p> 
+
+        <h2>Interactive Section</h2>
+        <form id="nameForm">
+            <label for="userName">Enter your name:</label>
+            <input type="text" id="userName" name="userName" required>
+            <button type="submit">Greet Me!</button>
+        </form>
+        <p id="greeting"></p>
+
+        <h2>Features List</h2>
+        <ul>
+            <li>Responsive design</li>
+            <li>Interactive JavaScript</li>
+            <li>Semantic HTML5 tags</li>
+            <li>CSS styling</li>
+            <li>Form validation</li>
+        </ul>
+
+        <img src="https://via.placeholder.com/300x150?text=Sample+Image" alt="Placeholder image">
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            document.getElementById('greeting').textContent = `Hello, ${name}!`;
+        });
+    </script>
 </body>
 </html>
